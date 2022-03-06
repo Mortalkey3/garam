@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'UbuntuTitling-Bold';
+  src: url('UbuntuTitling-Bold.eot');
+  src: url('UbuntuTitling-Bold.woff2') format('woff2'),
+       url('UbuntuTitling-Bold.woff') format('woff'),
+       url('UbuntuTitling-Bold.ttf') format('truetype'),
+       url('UbuntuTitling-Bold.svg#UbuntuTitling-Bold') format('svg'),
+       url('UbuntuTitling-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+

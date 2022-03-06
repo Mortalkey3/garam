@@ -1,0 +1,8 @@
+*.zip
+*.sql
+*.tar.gz
+*.tar.bz
+/index.php
+/config.php
+/.phpintel
+/asset/css/styles.css
