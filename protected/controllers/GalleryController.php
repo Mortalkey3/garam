@@ -2,7 +2,6 @@
 
 class GalleryController extends Controller
 {
-
 	public function actionIndex()
 	{
 		$criteria = new CDbCriteria;

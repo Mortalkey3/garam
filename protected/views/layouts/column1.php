@@ -1,102 +1,34 @@
 <?php /* @var $this Controller */ ?>
 <?php $this->beginContent('//layouts/main'); ?>
-<?php echo $this->renderPartial('//layouts/_header', array()); ?>
-<div class="clear"></div>
+<?php echo $this->renderPartial('//layouts/_header', array(
+			'page'=>$this->page)); ?>
+
+<header>
+
+  <!-- This div is  intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->
+  <div class="overlay"></div>
+
+  <!-- The HTML5 video element that will create the background video on the header -->
+  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+    <source src="https://seasalt.com/bundles/saltworkstheme/saltworks/images/demo/hero-video-720.mp4" type="video/mp4" id="izs5-2">
+        
+  </video>
+  
+  <!-- <img src="<?php echo Yii::app()->baseUrl; ?>/asset/images/Mound of Salt.jpg" /> -->
+
+  <!-- The header content -->
+  <div class="container h-100">
+    <div class="d-flex h-100 text-center align-items-center">
+      <div class="w-100 text-white">
+        <p class="lead mb-0">We are entrusted to supply the world's most essential mineral, enhancing life for every person, everyday.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
 <div class="middles_wrapper_cont tops_home">
     <!-- Start fcs -->
-    <div class="fcs-wrapper outers_fcs_wrapper prelatife">
-        <div class="prelatife">
-        <div id="myCarousel_home" class="carousel homeslide fade">
-            <?php
-            $criteria=new CDbCriteria;
-            $criteria->with = array('description');
-            $criteria->addCondition('description.language_id = :language_id');
-            $criteria->addCondition('active = 1');
-            $criteria->params[':language_id'] = $this->languageID;
-            $criteria->group = 't.id';
-            $criteria->order = 't.id ASC';
-            $slide = Slide::model()->with(array('description'))->findAll($criteria);
-            ?>
-            <ol class="carousel-indicators">
-                <?php foreach ($slide as $key => $value): ?>
-                    <li data-target="#myCarousel_home" data-slide-to="<?php echo $key; ?>" <?php if($key == 0){ ?>class="active"<?php } ?> ></li>
-                <?php endforeach; ?>
-            </ol>
-            <div class="carousel-inner">
-                <?php foreach ($slide as $key => $value): ?>
-                <div class="item <?php echo ($key == 0)? 'active':''; ?>">
-                    <div class="hidden-xs <?php if ($value->hide_text == 1): ?>hides_tx<?php endif ?>">
-                    <img src="<?php echo Yii::app()->baseUrl.ImageHelper::thumb(1880,837, '/images/'. $value->image , array('method' => 'adaptiveResize', 'quality' => '90')) ?>" alt="" class="img-responsive full_img">
-                    </div>
-                    <div class="visible-xs <?php if ($value->hide_text == 1): ?>hides_tx<?php endif ?>">
-                    <img src="<?php echo Yii::app()->baseUrl.ImageHelper::thumb(774,867, '/images/'. $value->image2 , array('method' => 'adaptiveResize', 'quality' => '90')) ?>" alt="" class="img-responsive">
-                    </div>
-                    <div class="carousel-caption" style="display: none;">
-                        <div class="prelatife container">
-                            <div class="blocks_right_inText_fcs">
-                                <div class="texts text-left">
-                                    <?php echo $value->description->subtitle ?>
-                                    <div class="clear height-20"></div>
-                                    <div class="lines-grey"></div>
-                                    <div class="clear height-20"></div>
-                                    <?php echo $value->description->content ?>
-                                    <a href="<?php echo $value->description->url ?>" class="btn btn-link btnsl_default2"><?php echo $value->description->url_teks ?></a>
-                                </div>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                    </div>
-                </div>
-                <?php endforeach; ?>
-            </div>
-        </div>
-        <!-- end wrap fcs -->
-        </div>
-        <!-- end container fcs -->
-
-        <div class="custom-blockFcs_customs_down">
-            <div class="prelatife container">
-                <div class="blocks_right_inText_fcs set2">
-                    <div class="texts">
-                        <h5>We are entrusted to supply the world's most essential mineral, enhancing life for every person, everyday.</h5>
-                    </div>
-                </div>
-
-                <?php /* <div class="blocks_right_inText_fcs">
-                    <div class="texts">
-                        <?php echo $this->setting['home_heroslide_title'] ?>
-                        <div class="clear height-20"></div>
-                        <div class="lines-grey"></div>
-                        <div class="clear height-20"></div>
-                        <?php echo $this->setting['home_heroslide_content'] ?>
-                        <a href="<?php echo $this->setting['home_heroslide_link'] ?>" class="btn btn-link btnsl_default2">Learn More About Cheetham</a>
-                    </div>
-                </div> */ ?>
-                <div class="lists_bannerBottom_fcshn" style="display: none;">
-                    <div class="row default">
-                        <div class="col-md-4">
-                            <div class="items">
-                                <a href="<?php echo $this->setting['home_banner_link_1'] ?>"><img src="<?php echo Yii::app()->baseUrl.ImageHelper::thumb(372,182, '/images/static/'. $this->setting['home_banner_pict_1'] , array('method' => 'adaptiveResize', 'quality' => '90')) ?>" alt="" class="img-responsive"></a>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="items">
-                                <a href="<?php echo $this->setting['home_banner_link_2'] ?>"><img src="<?php echo Yii::app()->baseUrl.ImageHelper::thumb(372,182, '/images/static/'. $this->setting['home_banner_pict_2'] , array('method' => 'adaptiveResize', 'quality' => '90')) ?>" alt="" class="img-responsive"></a>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="items">
-                                <a href="<?php echo $this->setting['home_banner_link_3'] ?>"><img src="<?php echo Yii::app()->baseUrl.ImageHelper::thumb(372,182, '/images/static/'. $this->setting['home_banner_pict_3'] , array('method' => 'adaptiveResize', 'quality' => '90')) ?>" alt="" class="img-responsive"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="clear"></div>
-            </div>
-        </div>
-        <div class="clear"></div>
-    </div>
-    <!-- End fcs -->
+    
    
 <?php echo $content ?>
 
@@ -157,5 +89,60 @@
     .outers_fcs_wrapper .carousel-caption{
         /*display: none;*/
     }
+</style>
+<style>
+    header {
+  position: relative;
+  background-color: black;
+  height: 90vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+  position: relative;
+  z-index: 2;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+/* Media Query for devices withi coarse pointers and no hover functionality */
+
+/* This will use a fallback image instead of a video for devices that commonly do not support the HTML5 video element */
+
+@media (pointer: coarse) and (hover: none) {
+  header {
+    background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+  }
+
+  header video {
+    display: none;
+  }
+}
 </style>
 <?php $this->endContent(); ?>

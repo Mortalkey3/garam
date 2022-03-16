@@ -33,6 +33,9 @@ class Controller extends CController
 
 	public $assetBaseurl;
 
+	public $page;
+	public $subPage;
+
 	public function beforeAction($action)
 	{
 		if ($_GET['lang']) {

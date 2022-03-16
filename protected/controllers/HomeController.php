@@ -3,6 +3,8 @@
 class HomeController extends Controller
 {
 
+	public $page;
+	public $subPage;
 	public function actions()
 	{
 		return array(
@@ -79,6 +81,7 @@ class HomeController extends Controller
 		$model->scenario = 'insert';
 
 		$this->layout='//layouts/column1';
+		$this->page = 'index';
 		$this->render('index', array(
 			'model'=>$model,
 		));
@@ -406,6 +409,7 @@ class HomeController extends Controller
 	public function actionAbout()
 	{
 		$this->pageTitle = 'About Us - '.$this->pageTitle;
+		$this->page='about';
 		$this->layout='//layouts/column2';
 
 		$this->render('about', array(	
@@ -415,6 +419,7 @@ class HomeController extends Controller
 	public function actionCertificate()
 	{
 		$this->pageTitle = 'Certificates - '.$this->pageTitle;
+		$this->page = 'certificate';
 		$this->layout='//layouts/column2';
 
 		$this->render('certificate', array(	
@@ -424,6 +429,8 @@ class HomeController extends Controller
 	public function actionLocation()
 	{
 		$this->pageTitle = 'Location - '.$this->pageTitle;
+		$this->page='about';
+		$this->subPage='location';
 		$this->layout='//layouts/column2';
 
 		$this->render('location', array(	
@@ -433,6 +440,8 @@ class HomeController extends Controller
 	public function actionIndustry()
 	{
 		$this->pageTitle = 'Industries - '.$this->pageTitle;
+		
+		$this->page='industry';
 		$this->layout='//layouts/column2';
 
 		$this->render('industry', array(
@@ -631,6 +640,7 @@ class HomeController extends Controller
 	public function actionProducts()
 	{
 		$this->pageTitle = 'Products - '. $this->pageTitle;
+		$this->page='products';
 		$this->layout='//layouts/column2';
 
 		// get products
@@ -930,6 +940,8 @@ Staff dari perabotplastik.com akan menghubungi anda untuk konfirmasi dan penjela
 	public function actionCareer()
 	{
 	    $this->pageTitle = 'Career - '.$this->pageTitle;
+		$this->page = 'contact';
+		$this->subPage = 'career';
 		$this->layout='//layouts/column2';
 
 		$model = new ContactForm;
@@ -1036,6 +1048,9 @@ Staff dari perabotplastik.com akan menghubungi anda untuk konfirmasi dan penjela
 
 	public function actionContact()
 	{
+		
+		$this->page='contact';
+		$this->subPage='contact';
 		$this->layout='//layouts/column2';
 
 		$this->pageTitle = 'Contact Us - '.$this->pageTitle;

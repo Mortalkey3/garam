@@ -1,59 +1,47 @@
-<!-- <section class="default_sc back-cream_home middles1_contHome">
-	<div class="prelatife container">
-		<div class="row">
-			<div class="col-md-6">
-				<div class="leftsn_description">
-					<h3>
-						echo nl2br($this->setting['home_middle_title']); 
-					</h3>
-					<div class="clear"></div>
-					echo $this->setting['home_middle_content'] 
+<section  style="background:#1a3880;">
+<div class="row m-3">
+  <div class=" container clear height-50"></div>
+  <div class=" reveal fade-left col-lg-8 bg-dark mt-n3 mr-n3 info" style="border-radius: 10px;">
+    <h2 class="mt-n3 font-medium text-size_9x lg:text-size_12x xl:text-size_13x text-white leading-height_27x lg:leading-height_32x xl:leading-height_36x mb-3 sm:mb-2 lg:mb-3 xl:mb-4 text-light">Cheetham Garam Indonesia</h2>
+    <div class="text-container">
+      <div class="text-box">
+        <p>
+          Cheetham Salt, adalah anak perusahaan yang sepenuhnya dimiliki dari CK Life Sciences International. Cheetham Salt adalah Produsen Garam Surya terbesar di Australia. Didirikan oleh Richard Cheetham pada tahun 1888, Tujuan kami adalah untuk membangun produk kami dan menawarkan layanan untuk pasar Australia dan Asia. Dengan bisnis yang didirikan di Indonesia dan kantor penjualan di Jepang, kami memiliki posisi yang baik untuk mendistribusikan produk kami di seluruh wilayah Asia Pasifik.
+        </p>
+        <div class="row justify-content-end">
+          <div class="col-4 text-right">
+            <a href="<?php echo CHtml::normalizeUrl(array('/home/about', 'sub'=>'profile', 'lang'=>Yii::app()->language)); ?>">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4"></div>
+</div>
+</section>
 
-					<div class="clear height-20"></div>
-					<div class="bxsn_form">
-						<form>
-							<div class="row default">
-								<div class="col-sm-6">
-									<div class="form-group">
-									    <label for="exampleInputEmail1">Your Name</label>
-									    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="">
-									  </div>
-								</div>
-								<div class="col-sm-6">
-									<div class="form-group">
-									    <label for="exampleInputEmail1">Your Company</label>
-									    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="">
-									  </div>
-								</div>
-							</div>
-							<div class="row default">
-								<div class="col-sm-6">
-									<div class="form-group">
-									    <label for="exampleInputEmail1">Email</label>
-									    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="">
-									  </div>
-								</div>
-								<div class="col-sm-6">
-									<div class="form-group">
-									    <label for="exampleInputEmail1">Phone</label>
-									    <div class="clear"></div>
-									    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="">
-									  </div>
-								</div>
-							</div>
-							<div class="fright">
-							<button type="submit" class="btn btn-link">SUBMIT</button>
-							</div>
-						</form>
-					</div>
-				</div>
-				<div class="clear"></div>
-			</div>
-			<div class="col-md-6"></div>
-		</div>
-		<div class="backs_trucks_rightHome"></div>
-	</div>
-</section> -->
+<section style="background:#1a3880;">
+  <div  class="col-lg-5 info"></div>
+  <div  class="reveal fade-right col-lg-7 bg-dark info" style="border-radius: 10px;">
+    <h2 class="font-medium text-size_9x lg:text-size_12x xl:text-size_13x text-white leading-height_27x lg:leading-height_32x xl:leading-height_36x mb-3 sm:mb-2 lg:mb-3 xl:mb-4 text-light">Cheetham Garam Indonesia</h2>
+    <div class="text-container">
+      <div class="text-box">
+        <p>
+          Cheetham Salt, adalah anak perusahaan yang sepenuhnya dimiliki dari CK Life Sciences International. Cheetham Salt adalah Produsen Garam Surya terbesar di Australia. Didirikan oleh Richard Cheetham pada tahun 1888, Tujuan kami adalah untuk membangun produk kami dan menawarkan layanan untuk pasar Australia dan Asia. Dengan bisnis yang didirikan di Indonesia dan kantor penjualan di Jepang, kami memiliki posisi yang baik untuk mendistribusikan produk kami di seluruh wilayah Asia Pasifik.
+        </p>
+        <div class="row justify-content-end">
+          <div class="col-4 text-right">
+            <a href="<?php echo CHtml::normalizeUrl(array('/home/about', 'sub'=>'profile', 'lang'=>Yii::app()->language)); ?>">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=" container clear height-50"></div>
+  </div>
+</section>
+
+
 
 <section id="block_home2" class="default_sc back-cream_middle_cont_home prelatife" >
 	<div class="prelatife container">

@@ -20,10 +20,11 @@ class BlogController extends Controller
 	// 	$this->render('//blog/d_detail', array(	
 	// 	));
 	// }
-
+	public $page;
+	public $subPage;
 	public function actionIndex()
 	{
-
+		$this->page = 'blog';
 		$criteria = new CDbCriteria;
 		$criteria->with = array('description');
 		$criteria->addCondition('active = "1"');
