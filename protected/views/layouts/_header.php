@@ -17,92 +17,46 @@ $criteria->order = 'sort ASC';
 $dataCategory = PrdCategory::model()->findAll($criteria);
 ?>
 
-<div class="site-mobile-menu site-navbar-target">
-      <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close mt-3">
-          <span class="icon-close2 js-menu-toggle"></span>
-        </div>
-      </div>
-      <div class="site-mobile-menu-body"></div>
-    </div> <!-- .site-mobile-menu -->
-    
-    
-    <div class="site-navbar-wrap">
-      <div class="site-navbar site-navbar-target js-sticky-header">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-2">
-              <h1 class="my-0 site-logo"><a href="index.html">Brand</a></h1>
-            </div>
-            <div class="col-10">
-              <nav class="site-navigation text-right" role="navigation">
-                <div class="container">
-                  <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
-
-                  <ul class="site-menu main-menu js-clone-nav d-none d-lg-block">
-                    <li><a <?php echo ($page == 'index')? 'class="active"':''; ?> href="<?php echo CHtml::normalizeUrl(array('/home/index', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'HOME') ?></a></li>
-                  
-                    <li class="has-children">
-                      <a href="#" class="nav-link <?php echo ($page == 'about')? 'active':''; ?>"  ><?php echo Tt::t('front', 'about us') ?></a>
-                      <ul class="dropdown arrow-top" >
-                        <li><a class="nav-link <?php echo (isset($_GET['sub']) && $_GET['sub'] == 'profile')? 'active':''; ?>"   href="<?php echo CHtml::normalizeUrl(array('/home/about', 'sub'=>'profile', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Corporate Profile') ?></a></li>
-                        <li><a class="nav-link <?php echo (isset($_GET['sub']) && $_GET['sub'] == 'history')? 'active':''; ?>" href="<?php echo CHtml::normalizeUrl(array('/home/about', 'sub'=>'history', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Cheetham History') ?></a></li>
-                        <li><a class="nav-link <?php echo (isset($_GET['sub']) && $_GET['sub'] == 'our_value')? 'active':''; ?>" href="<?php echo CHtml::normalizeUrl(array('/home/about', 'sub'=>'our_value', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Our Value') ?></a></li>
-                        <li><a class="nav-link <?php echo ($subPage == 'location')? 'active':''; ?>" href="<?php echo CHtml::normalizeUrl(array('/home/location', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'our location') ?></a></li>
-                      </ul>
-                    </li>
-                    
-                    <li><a <?php echo ($page == 'industry')? 'class="active"':''; ?> href="<?php echo CHtml::normalizeUrl(array('/home/industry', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'industries') ?></a></li>
-
-                    <li class="has-children">
-                      <a href="#" <?php echo ($page == 'products')? 'class="active"':''; ?> role="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><?php echo Tt::t('front', 'products') ?> <span class="caret"></span></a>
-                      <ul class="dropdown arrow-top" aria-labelledby="dropdownMenu1">
-                        <li><a <?php echo (isset($_GET['sub']) && $_GET['sub'] == 'industry')? 'class="active"':''; ?> href="<?php echo CHtml::normalizeUrl(array('/home/products', 'sub'=>'industry', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Industry') ?></a></li>
-                        <li><a <?php echo (isset($_GET['sub']) && $_GET['sub'] == 'human_salt')? 'class="active"':''; ?> href="<?php echo CHtml::normalizeUrl(array('/home/products', 'sub'=>'human_salt', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Human Salt Comsumption') ?></a></li>
-                        <li><a <?php echo ($subPage == 'labeling')? 'class="active"':''; ?> href="<?php echo CHtml::normalizeUrl(array('/home/labeling', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'private label') ?></a></li>
-                      </ul>
-                    </li>
-
-                    <li class="has-children">
-                      <a <?php echo ($page == 'certificate')? 'class="active"':''; ?>  href="#" role="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><?php echo Tt::t('front', 'certificate') ?> <span class="caret"></span></a>
-                      <ul class="dropdown arrow-top" aria-labelledby="dropdownMenu3">
-                        <li><a <?php echo (isset($_GET['sub']) && $_GET['sub'] == 'tech_info')? 'class="active"':''; ?> href="<?php echo CHtml::normalizeUrl(array('/home/certificate', 'sub'=>'tech_info', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Quality Assurance') ?></a></li>
-                        <li><a <?php echo (isset($_GET['sub']) && $_GET['sub'] == 'awards')? 'class="active"':''; ?> href="<?php echo CHtml::normalizeUrl(array('/home/certificate', 'sub'=>'awards', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Award') ?></a></li>
-                      </ul>
-                    </li>
-                    
-                    <li><a <?php echo ($page == 'blog')? 'class="active"':''; ?> href="<?php echo CHtml::normalizeUrl(array('/blog/index', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'NEWS') ?></a></li>
-
-                    <li class="has-children">
-                      <a href="#" <?php echo ($page == 'contact')? 'class="active"':''; ?>  type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><?php echo Tt::t('front', 'contact us') ?> <span class="caret"></span></a>
-                      <ul class="dropdown arrow-top" aria-labelledby="dropdownMenu4">
-                        <li><a <?php echo ($subPage == 'contact')? 'class="active"':''; ?> href="<?php echo CHtml::normalizeUrl(array('/home/contact', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Inquiry') ?></a></li>
-                        <li><a <?php echo ($subPage == 'career')? 'class="active"':''; ?> href="<?php echo CHtml::normalizeUrl(array('/home/career', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'CAREERS') ?></a></li>
-                      </ul>
-                    </li>
-
-                    <li class="has-children">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-translate" viewBox="0 0 16 16">
-                        <path d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286H4.545zm1.634-.736L5.5 3.956h-.049l-.679 2.022H6.18z"/>
-                        <path d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2zm7.138 9.995c.193.301.402.583.63.846-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6.066 6.066 0 0 1-.415-.492 1.988 1.988 0 0 1-.94.31z"/>
-                      </svg>
-                      <a href="#"><?php echo Tt::t('front', 'Lang') ?></a>
-                      <ul class="dropdown arrow-top" aria-labelledby="dropdownMenu4">
-                        <li>
-                          <?php $get = $_GET;$get['lang'] = 'id';?>
-                          <a <?php echo (Yii::app()->language == 'id')? 'class="active"':''; ?> href="<?php echo $this->createUrl($this->route, $get) ?>">Bahasa Indonesia</a>
-                        </li>
-                        <li>
-                          <?php $get['lang'] = 'en';?>
-                          <a <?php echo (Yii::app()->language == 'en')? 'class="active"':''; ?> href="<?php echo $this->createUrl($this->route, $get) ?>">English</a>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-              </nav>
-            </div>
+<header class="u-clearfix u-header u-header" id="sec-7f8c"><div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-hidden-md u-hidden-sm u-hidden-xs u-text u-text-default u-text-1">www.cheethamsalt.com.au</p>
+        <p class="u-hidden-md u-hidden-sm u-hidden-xs u-text u-text-default u-text-2">English | Bahasa Indonesia</p>
+        <p class="u-enable-responsive u-hidden-md u-hidden-sm u-hidden-xs u-text u-text-3"> PT. Cheetham Garam Indonesia</p>
+        <p class="u-hidden-md u-hidden-sm u-hidden-xs u-text u-text-default u-text-4">
+          <span style="font-size: 0.75rem;"> Subsidiary Cheetham Salt Ltd. - Australia</span>
+        </p>
+        <a href="#" class="u-enable-responsive u-image u-logo u-image-1 ml-5">
+          <img src="<?php echo Yii::app()->baseUrl.'/asset/images/'; ?>favicon-32x32.png">
+        </a>
+        <nav class="u-dropdown-icon u-menu u-menu-dropdown u-offcanvas u-menu-1">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px; font-weight: 700; text-transform: uppercase;">
+            <a class="u-button-style u-custom-active-border-color u-custom-border u-custom-border-color u-custom-borders u-custom-hover-border-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#" style="padding: 7px 12px; font-size: calc(1em + 14px);">
+              <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+              <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</g></svg>
+            </a>
           </div>
-        </div>
+          <div class="u-custom-menu u-nav-container">
+            <ul class="u-nav u-spacing-30 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-1-base u-text-white <?php echo ($page == 'index')? 'active':''; ?>" href="<?php echo CHtml::normalizeUrl(array('/home/index', 'lang'=>Yii::app()->language)); ?>" style="padding: 10px 0px;"><?php echo Tt::t('front', 'HOME') ?></a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-1-base u-text-white" href="About.html" style="padding: 10px 0px;">About</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-1-base u-text-white" href="Contact.html" style="padding: 10px 19px 10px 0px;">Contact</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">Test1</a>
+</li></ul>
+</div>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-3"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/Home.html" style="padding: 10px 0px;">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="About.html" style="padding: 10px 0px;">About</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Contact.html" style="padding: 10px 0px;">Contact</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-4"><li class="u-nav-item"><a class="u-button-style u-nav-link">Test1</a>
+</li></ul>
+</div>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
       </div>
-    </div>
+    </header>

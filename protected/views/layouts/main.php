@@ -32,7 +32,12 @@
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl; ?>/asset/css/owl.carousel.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl; ?>/asset/css/bootstrap.min.css">
 
-    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl; ?>/asset/css/style_custom.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl; ?>/asset/nicepage/home.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl; ?>/asset/nicepage/nicepage.css">
+    <script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/asset/nicepage/nicepage.js"></script>
+    
+    
+    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl; ?>/asset/css/style_custom.css">    
     <script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/asset/js/jquery-3.3.1.min.js"></script>
     <?php Yii::app()->clientScript->registerCoreScript('jquery.ui'); ?>
    
@@ -52,7 +57,7 @@
     
     <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl.Yii::app()->theme->baseUrl; ?>/asset/css/font-awesome-4.2.0/css/font-awesome.min.css">
   </head>
-<body>
+<body class="u-body u-overlap u-overlap-contrast u-overlap-transparent u-xl-mode">
     <?php echo $content ?>
     
     <div id="back-top" class="t-backtop">
