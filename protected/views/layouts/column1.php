@@ -1,10 +1,18 @@
 <?php /* @var $this Controller */ ?>
 <?php $this->beginContent('//layouts/main'); ?>
+
+<div class="preloader">
+    <div class="loading">
+    <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+    </div>
+</div>
+
 <?php echo $this->renderPartial('//layouts/_header', array(
 			'page'=>$this->page)); ?>
 
-<header>
-
+<div class="banner">
   <!-- This div is  intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->
   <div class="overlay"></div>
 
@@ -19,12 +27,12 @@
   <!-- The header content -->
   <div class="container h-100">
     <div class="d-flex h-100 text-center align-items-center">
-      <div class="w-100 text-white">
+      <div class="w-100  text-white">
         <p class="lead mb-0">We are entrusted to supply the world's most essential mineral, enhancing life for every person, everyday.</p>
       </div>
     </div>
   </div>
-</header>
+</div>
 
 <div class="middles_wrapper_cont tops_home">
     <!-- Start fcs -->
@@ -35,6 +43,7 @@
 <?php echo $this->renderPartial('//layouts/_footer', array()); ?>
    <div class="clear"></div>
 </div>
+
 <script type="text/javascript">
     $(function(){
         // $('#myCarousel_home.homeslide').on('slid.bs.carousel', function (e){
@@ -91,7 +100,7 @@
     }
 </style>
 <style>
-    header {
+.banner {
   position: relative;
   background-color: black;
   height: 90vh;
@@ -100,7 +109,7 @@
   overflow: hidden;
 }
 
-header video {
+.banner video {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -115,12 +124,12 @@ header video {
   transform: translateX(-50%) translateY(-50%);
 }
 
-header .container {
+.banner .container {
   position: relative;
   z-index: 2;
 }
 
-header .overlay {
+.banner .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -136,13 +145,33 @@ header .overlay {
 /* This will use a fallback image instead of a video for devices that commonly do not support the HTML5 video element */
 
 @media (pointer: coarse) and (hover: none) {
-  header {
-    background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
-  }
 
   header video {
     display: none;
   }
 }
 </style>
+<style type="text/css">
+    .preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background-color: #fff;
+    }
+    .loading {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        font: 14px arial;
+    }
+</style>
+<script>
+    $(document).ready(function() {
+        $(".preloader").fadeOut("slow");
+    });
+</script>
 <?php $this->endContent(); ?>

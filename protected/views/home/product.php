@@ -1,99 +1,84 @@
 <div class="subpage static_about">
   
   <section class="default_sc middle_industry_first" id="industries2">
-  <div class="prelatife container">
-      <div class="clear height-50"></div>
-      <div class="clear height-25"></div>
-      <div class="insides text-center content-text">
-        <div class="maw570 tengah">
-          <h3 class="sub_title"><?php echo nl2br($this->setting['product_hero_title']) ?></h3>
-          <div class="clear height-5"></div>
-          <?php echo $this->setting['product_content'] ?>
-        </div>
-        <div class="clear height-10"></div>
-
-        
-        <!-- End block products -->
-        <div class="blocks_wrap_products text-left">
-          <?php foreach ($data as $key => $value): ?>
-          <div class="category_list_block type_<?php echo $key ?>" data-id="<?php echo $key ?>">
-            <div class="clear height-50"></div>
-            <div class="text-center">
-              <?php 
-              $criteriac = new CDbCriteria;
-              $criteriac->with = array('description');
-              $criteriac->addCondition('t.type = :type');
-              $criteriac->addCondition('t.id = :ids');
-              $criteriac->params[':type'] = 'category';
-              $criteriac->params[':ids'] = $key;
-
-              $criteriac->addCondition('description.language_id = :language_id');
-              $criteriac->params[':language_id'] = $this->languageID;
-
-              $strCategory = PrdCategory::model()->find($criteriac);
-              ?>
-              <h4 class="sub_title"><?php echo $strCategory->description->name; ?></h3>
-            </div>
-              <div class="clear height-50"></div>
-              <div class="clear height-10"></div>
-              <div class="lists_product_data">
-                <div class="row default">
-                  <?php $numb = 1; ?>
-                  <?php foreach ($value as $ke => $val) { ?>
-                  <div class="col-md-6">
-                    <div class="items">
-                      <div class="row">
-                        <div class="col-sm-6">
-                          <div class="picture"><img src="<?php echo Yii::app()->baseUrl.ImageHelper::thumb(264,264, '/images/product/'. $val->image , array('method' => 'adaptiveResize', 'quality' => '90')) ?>" alt="<?php echo $val->description->name; ?>" class="img-responsive center-block"></div>
-                        </div>
-                        <div class="col-sm-6">
-                          <div class="infos">
-                            <span class="names"><?php echo $val->description->name ?></span>
-                            <p><strong><?php echo Tt::t('front', 'Specification') ?></strong><br />
-                            <?php echo $val->description->desc ?></p>
-                            <p><strong><?php echo Tt::t('front', 'Packing') ?></strong><br />
-                            <?php echo $val->description->packing ?></p>
-                            <p><strong><?php echo Tt::t('front', 'Applications') ?></strong><br />
-                            <?php echo $val->description->applications ?></p>
-                            <?php if ($val->description->directions): ?>
-                              <p><strong><?php echo Tt::t('front', 'Directions') ?></strong><br />
-                              <?php echo $val->description->directions; ?></p>
-                            <?php endif ?>
-                            <button type="button" class="btn btn-default btns_blcBluek" data-toggle="modal" data-target="#myModal" data-image="<?php echo Yii::app()->baseUrl.ImageHelper::thumb(264,264, '/images/product/'. $val->image , array('method' => 'adaptiveResize', 'quality' => '90')) ?>" data-product="<?php echo strtoupper($val->description->name) ?>">Inquire This Product</button>
-                            <div class="clear"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="clear"></div>
-                    </div>
-                  </div>
-                  <?php if ( ($numb % 2) == 0): ?>
-                    <?php if ($key != 1): ?>
-                      <div class="clear height-10"></div>
-                      <div class="lines_d"></div>
-                      <div class="clear height-50"></div>
-                    <?php endif ?>
-                  <?php endif ?>
-                  <?php $numb++; ?>
-                  <?php } ?>
-                </div>
-              </div>
-            <!-- End list product data -->
-            <div class="clear"></div>
+  
+  <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-list u-list-1"></div>
+        <div class="u-container-style u-group u-group-1">
+          <div class="u-container-layout">
+            <img class="u-image u-image-default u-image-1" src="/images/pexels-photo-4465124-4.jpeg" alt="" data-image-width="1000" data-image-height="1500">
+            <h3 class="u-align-left u-text u-text-1">from how to wear key pieces and&nbsp;<b>trends</b>
+            </h3>
+            <p class="u-align-left u-text u-text-2">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
-          <?php endforeach ?>
         </div>
-
-
-        <div class="clear height-50"></div>
-        <div class="clear height-30"></div>
-        <div class="clear"></div>
+        <div class="u-expanded-width u-layout-horizontal u-list u-list-2">
+          <div class="u-repeater u-repeater-1">
+            <div class="u-align-center u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-valign-top-lg u-valign-top-md u-valign-top-sm u-valign-top-xs u-container-layout-2">
+                <img class="u-image u-image-default u-image-2" src="/images/pexels-photo-4465124.jpeg" alt="" data-image-width="1000" data-image-height="1500">
+                <p class="u-text u-text-default u-text-3">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-valign-top-lg u-valign-top-md u-valign-top-sm u-valign-top-xs u-container-layout-3">
+                <img class="u-image u-image-default u-image-3" src="/images/pexels-photo-4465124.jpeg" alt="" data-image-width="1000" data-image-height="1500">
+                <p class="u-text u-text-default u-text-4">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-valign-top-lg u-valign-top-md u-valign-top-sm u-valign-top-xs u-container-layout-4">
+                <img class="u-image u-image-default u-image-4" src="/images/pexels-photo-4465124.jpeg" alt="" data-image-width="1000" data-image-height="1500">
+                <p class="u-text u-text-default u-text-5">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-valign-top-lg u-valign-top-md u-valign-top-sm u-valign-top-xs u-container-layout-5">
+                <img class="u-image u-image-default u-image-5" src="/images/pexels-photo-4465124.jpeg" alt="" data-image-width="1000" data-image-height="1500">
+                <p class="u-text u-text-default u-text-6">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-valign-top-lg u-valign-top-md u-valign-top-sm u-valign-top-xs u-container-layout-6">
+                <img class="u-image u-image-default u-image-6" src="/images/pexels-photo-4465124.jpeg" alt="" data-image-width="1000" data-image-height="1500">
+                <p class="u-text u-text-default u-text-7">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-valign-top-lg u-valign-top-md u-valign-top-sm u-valign-top-xs u-container-layout-7">
+                <img class="u-image u-image-default u-image-7" src="/images/pexels-photo-4465124.jpeg" alt="" data-image-width="1000" data-image-height="1500">
+                <p class="u-text u-text-default u-text-8">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+              </div>
+            </div>
+          </div>
+          <a class="u-absolute-vcenter u-gallery-nav u-gallery-nav-prev u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-gallery-nav-1" href="#" role="button">
+            <span aria-hidden="true">
+              <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
+            </span>
+            <span class="sr-only">
+              <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
+            </span>
+          </a>
+          <a class="u-absolute-vcenter u-gallery-nav u-gallery-nav-next u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-gallery-nav-2" href="#" role="button">
+            <span aria-hidden="true">
+              <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
+            </span>
+            <span class="sr-only">
+              <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
+            </span>
+          </a>
+        </div>
       </div>
-      <div class="clear"></div>
-  </div>
-  </section>
 
-  <div class="clear"></div>
+  
 </div>
 <!-- End subpage static -->
 

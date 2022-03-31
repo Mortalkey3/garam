@@ -2,12 +2,31 @@
 <div class="subpage static_about">
 
   <section class="default_sc middle_location_first" id="location2">
-  	<div class="prelatife container">
+  	<div class="prelatife container-fluid container">
   		<div class="insides text-left content-text text-center">
   					<h3 class="sub_title"><?php echo $this->setting['location_hero_title'] ?></h3>
             <div class="clear height-50"></div>
-  					<div class="clear height-30"></div>
-  					<div class="maw840 tengah">
+            <div class="row">
+              <div class="col-xs-1 col-md-1"></div>
+  <div class="col-xs-10 col-md-10"><div style="width: 100%; overflow: hidden; height: 350px;" >
+                <div class='embed-container maps map-responsive'>
+                  <iframe 
+                    src="https://www.google.com/maps/d/u/0/embed?mid=10PcQHnxfxw5u5LN38XiIL-XLYvwekG53&ehbc=2E312F"
+                    width="100%"
+                    height="600"
+                    frameborder="0"
+                    scrolling="no" 
+                    marginheight="0" 
+                    marginwidth="0" 
+                    style="border:0; margin-top: -150px;">
+                  </iframe>
+                </div>
+                </div></div>
+  <div class="col-xs-1 col-md-1"></div>
+            </div>
+  					
+            <div class="clear height-30"></div>
+  					<div class="maw840 tengah m-5">
               <div class="row default">
                 <div class="col-md-4 col-sm-4">
                   <div class="items">

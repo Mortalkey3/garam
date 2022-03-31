@@ -27,11 +27,23 @@
   <section class="default_sc middle_about_seconds" id="about3">
     <div class="prelatife inBlock_table container">
       <div class="insides text-center content-text">
-        <div class="mw995 tengah">
-          <h3 class="sub_title"><?php echo $this->setting['develop_title'] ?></h3>
-          <?php echo $this->setting['develop_content'] ?>
-          <div class="clear"></div>
-        </div>
+        
+	  <div class="row h-100">
+		  
+		<div class="col-sm-2 my-auto"></div>
+   		<div class="col-sm-8 my-auto">
+			   <div class="clear height-50"></div>
+			   <div class="clear height-50"></div>
+			   
+			   <div class="clear height-50"></div>
+			<div class="align-middle tengah">
+         	 	<h3 class="sub_title"><?php echo $this->setting['develop_title'] ?></h3>
+          		<?php echo $this->setting['develop_content'] ?>
+          		<div class="clear"></div>
+        	</div>
+		</div>
+		<div class="col-sm-2 my-auto"></div>
+	   </div>
 
         <div class="clear"></div>
       </div>
@@ -57,16 +69,149 @@
 			</div>
 		</div>
   		<div class="clear"></div>
+		  <div class="insides text-left content-text">
+			
+	  <div class="clear height-50"></div><div class="height-25"></div>
+		<h3 class="sub_title ">Cheetham Garam Milestones</h3>
+		<div class="height-25"></div>
+		<div class="container">
+		<div class="main-timeline">
+			<!-- start experience section-->
+			<div class="timeline">
+				<div class="icon"></div>
+				<div class="date-content">
+					<div class="date-outer">
+						<span class="date">
+								<span class="month">Jan</span>
+						<span class="year">2019</span>
+						</span>
+					</div>
+				</div>
+				<div class="timeline-content">
+					<h2 class="title">Establishment of PT Cheetham Flores Indonesia</h2>
+					<p class="description">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur ex sit amet massa scelerisque scelerisque. Aliquam erat volutpat. Aenean interdum finibus efficitur. Praesent dapibus dolor felis, eu ultrices elit molestie.
+					</p>
+				</div>
+			</div>
+			<!-- end experience section-->
+
+			<!-- start experience section-->
+			<div class="timeline">
+				<div class="icon"></div>
+				<div class="date-content">
+					<div class="date-outer">
+						<span class="date">
+								<span class="month">Jan</span>
+						<span class="year">2017</span>
+						</span>
+					</div>
+				</div>
+				<div class="timeline-content">
+					<h2 class="title">Establishment of Integrated Nggolonio Salt Field and Salt Factory, East Nusa Tenggara</h2>
+					<p class="description">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur ex sit amet massa scelerisque scelerisque. Aliquam erat volutpat. Aenean interdum finibus efficitur. Praesent dapibus dolor felis, eu ultrices elit molestie.
+					</p>
+				</div>
+			</div>
+			<!-- end experience section-->
+
+			<!-- start experience section-->
+			<div class="timeline">
+				<div class="icon"></div>
+				<div class="date-content">
+					<div class="date-outer">
+						<span class="date">
+								<span class="month">Jan</span>
+						<span class="year">2016</span>
+						</span>
+					</div>
+				</div>
+				<div class="timeline-content">
+					<h2 class="title">Establishment of Nggolonio Salt Field, East Nusa Tenggara</h2>
+					<p class="description">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur ex sit amet massa scelerisque scelerisque. Aliquam erat volutpat. Aenean interdum finibus efficitur. Praesent dapibus dolor felis, eu ultrices elit molestie.
+					</p>
+				</div>
+			</div>
+			<!-- end experience section-->
+
+			<!-- start experience section-->
+			<div class="timeline">
+				<div class="icon"></div>
+				<div class="date-content">
+					<div class="date-outer">
+						<span class="date">
+								<span class="month">Jan</span>
+						<span class="year">2013</span>
+						</span>
+					</div>
+				</div>
+				<div class="timeline-content">
+					<h2 class="title">CK Life Sciences director joined the board</h2>
+					<p class="description">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur ex sit amet massa scelerisque scelerisque. Aliquam erat volutpat. Aenean interdum finibus efficitur. Praesent dapibus dolor felis, eu ultrices elit molestie.
+					</p>
+				</div>
+			</div>
+			<!-- end experience section-->
+			<div class="timeline">
+				<div class="icon"></div>
+				<div class="date-content">
+					<div class="date-outer">
+						<span class="date">
+								<span class="month">Jan</span>
+						<span class="year">1998</span>
+						</span>
+					</div>
+				</div>
+				<div class="timeline-content">
+					<h2 class="title">Establishment of Cilegon Office and Factory</h2>
+					<p class="description">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur ex sit amet massa scelerisque scelerisque. Aliquam erat volutpat. Aenean interdum finibus efficitur. Praesent dapibus dolor felis, eu ultrices elit molestie.
+					</p>
+				</div>
+			</div>
+
+			<div class="timeline">
+				<div class="icon"></div>
+				<div class="date-content">
+					<div class="date-outer">
+						<span class="date">
+								<span class="month">Jan</span>
+						<span class="year">1880</span>
+						</span>
+					</div>
+				</div>
+				<div class="timeline-content">
+					<h2 class="title">Richard Cheetham began construction of Salt Field of salt field in Geelong - Victoria Australia</h2>
+					<p class="description">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur ex sit amet massa scelerisque scelerisque. Aliquam erat volutpat. Aenean interdum finibus efficitur. Praesent dapibus dolor felis, eu ultrices elit molestie.
+					</p>
+				</div>
+			</div>
+
+        </div>
+		<div class="clear height-50"></div>
+		</div>
 	</div>
-  </section>
+	</div>
+  <!-- </section>
+  <section > -->
+	  
+	</section>
 <?php endif; ?>  
 
 <?php if (isset($_GET['sub']) && $_GET['sub'] == 'our_value'): ?>
   <section class="default_sc middles_bottomWhite_aboutThirds" id="about4">
-  	<div class="prelatife container">
+	<div style="background-color:#565656";>
+	<img src="<?php echo Yii::app()->baseUrl.'/asset/images/'; ?>backs_inb_about_4.jpg" style="max-width:100%;padding-top:5em" />
+	</div>
+	<!-- <div class="prelatife container">
   		<div class="clear height-50"></div>
-  		<div class="clear height-50"></div>
+		  <div class="clear height-50"></div>
   		<div class="content-text text-center">
+			  
   			<h3 class="sub_title"><?php echo $this->setting['ourval_title'] ?></h3>
   			<div class="clear height-30"></div>
   			<img src="<?php echo Yii::app()->baseUrl.ImageHelper::thumb(667,260, '/images/static/'. $this->setting['ourval_picture'] , array('method' => 'adaptiveResize', 'quality' => '90')) ?>" alt="" class="img-responsive center-block">
@@ -141,8 +286,9 @@
   			</div>
   			<div class="clear"></div>
   		</div>
-  	</div>
+  	</div> -->
   </section>
+  
 
   <?php endif; ?>  
 
