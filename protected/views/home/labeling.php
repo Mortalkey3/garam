@@ -4,6 +4,7 @@
   <section class="default_sc middle_industry_first pg_cheetham_privateLabel" id="industries2">
   <div class="prelatife container">
       <div class="clear height-50"></div>
+      <div class="clear height-50"></div>
       <div class="clear height-25"></div>
       <div class="insides text-center content-text">
         <div class="maw760 tengah">

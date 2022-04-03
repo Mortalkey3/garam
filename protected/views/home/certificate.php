@@ -1,7 +1,8 @@
-<div class="subpage static_about">
+<div class="subpage static_about" >
 
-  <section class="default_sc middle_industry_first" id="industries2">
-  <div class="prelatife container">
+  <section class="default_sc middle_industry_first" id="industries2" style="background-color:#303F7A" >
+  <div class="prelatife container" >
+      <div class="clear height-50"></div>
       <div class="clear height-50"></div>
       <div class="clear height-25"></div>
       <div class="insides text-center">

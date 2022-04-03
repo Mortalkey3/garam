@@ -1,4 +1,5 @@
 
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl; ?>/asset/nicepage/home.css">
 
 <section class="u-clearfix u-section-2" id="sec-07c7" style="background:#394884">
       <div class="u-clearfix u-sheet u-sheet-1">

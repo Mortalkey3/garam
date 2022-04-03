@@ -7,10 +7,10 @@
   		<div class="h172"></div>
   		<div class="clear"></div>
   		<div class="content-text">
-  			<h1><?php echo $this->setting['about_hero_title'] ?></h1>
+  			<h1 ><b><?php echo $this->setting['about_hero_title'] ?></b></h1>
   			<div class="clear height-10"></div>
-  			<h2><?php echo nl2br($this->setting['about_hero_sub_title']) ?></h2>
-  			<div class="row default prelatife">
+  			<h2 class="text-primary"><?php echo nl2br($this->setting['about_hero_sub_title']) ?></h2>
+  			<div class="row default prelatife ">
   				<div class="col-md-6 col-sm-12">
   					<?php echo $this->setting['about_hero_content'] ?>
 
@@ -204,8 +204,8 @@
 
 <?php if (isset($_GET['sub']) && $_GET['sub'] == 'our_value'): ?>
   <section class="default_sc middles_bottomWhite_aboutThirds" id="about4">
-	<div style="background-color:#565656";>
-	<img src="<?php echo Yii::app()->baseUrl.'/asset/images/'; ?>backs_inb_about_4.jpg" style="max-width:100%;padding-top:5em" />
+	<div style="background-color:#303F7A">
+	<img src="<?php echo Yii::app()->baseUrl.'/asset/images/'; ?>backs_inb_about_4.jpg" style="max-width:100%;padding-top:5em;" />
 	</div>
 	<!-- <div class="prelatife container">
   		<div class="clear height-50"></div>

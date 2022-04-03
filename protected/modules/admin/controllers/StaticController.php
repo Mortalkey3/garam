@@ -108,6 +108,7 @@ class StaticController extends ControllerAdmin
 			$stsError = 0;
 
 			$setting = $_FILES['Setting'];
+			if(isset($setting['name']))
 			if (count($setting['name'])>0) {
 				foreach ($setting['name'] as $key => $value) {
 					if (
@@ -152,6 +153,7 @@ class StaticController extends ControllerAdmin
 					}
 
 					$setting = $_FILES['Setting'];
+					if(isset($setting))
 					if (count($setting)>0) {
 					foreach ($setting['name'] as $key => $value) {
 						if ($setting['tmp_name'][$key] != '') {

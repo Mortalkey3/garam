@@ -17,8 +17,10 @@
 
   <section class="default_sc middle_industry_first" id="industries2">
 	<div class="prelatife container">
+      
       <div class="clear height-50"></div>
-      <div class="clear height-25"></div>
+      <div class="clear height-50"></div>
+      <div class="clear height-50"></div>
   		<div class="insides text-center content-text">
         <h3 class="sub_title"><?php echo $this->setting['industry_hero_title'] ?></h3>
         <div class="clear height-0"></div>

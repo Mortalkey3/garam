@@ -1,4 +1,5 @@
 <?php /* @var $this Controller */ ?>
+
 <?php $this->beginContent('//layouts/main'); ?>
 
 <div class="preloader">
@@ -170,8 +171,8 @@
     }
 </style>
 <script>
-    $(document).ready(function() {
-        $(".preloader").fadeOut("slow");
-    });
+  $(window).on('load', function() {
+    $(".preloader").fadeOut("slow");
+  });
 </script>
 <?php $this->endContent(); ?>

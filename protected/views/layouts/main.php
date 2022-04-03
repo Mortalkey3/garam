@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <meta name="language" content="<?php echo Yii::app()->language ?>" />
 
     <meta name="keywords" content="<?php echo CHtml::encode($this->metaKey); ?>">
@@ -30,7 +29,6 @@
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl; ?>/asset/css/fonts/icomoon/style.css">
 
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl; ?>/asset/css/owl.carousel.min.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl; ?>/asset/nicepage/home.css">
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl; ?>/asset/nicepage/nicepage.css">
     
     
